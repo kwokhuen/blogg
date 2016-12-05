@@ -1,24 +1,5 @@
-# README
+# Blogg
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Blogg is a simple blogging application that is built by Ruby on Rails, PostgreSQL, HTML5/CSS and Bootstrap.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is not completed. More functions will be added later. 
