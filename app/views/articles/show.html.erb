@@ -6,9 +6,11 @@
   </h4>
   <hr>
   <%= simple_format(@article.description) %>
-  <div class="article-actions">
-    <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
-    <%= link_to "Back to article listing", articles_path, class: "btn btn-xs btn-info" %>
-    <%= link_to "Delete", article_path(@article), method: :delete, class: "btn btn-xs btn-danger", data: { confirm: "Are you sure?" } %>
-  </div>
+  <%= link_to "Back to article listing", articles_path, class: "btn btn-xs btn-info" %>
+  <% if logged_in? && current_user == @article.user %>
+    <div class="article-actions">
+      <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+      <%= link_to "Delete", article_path(@article), method: :delete, class: "btn btn-xs btn-danger", data: { confirm: "Are you sure?" } %>
+    </div>
+  <% end %>
 </div>
