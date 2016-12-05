@@ -8,9 +8,13 @@
       </div>
       <hr>
       <%= truncate(article.description, length: 40) %>
-      <hr>
-      <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-primary" %>
-      <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger"%>
+      <div class="article-meta-data">
+        <small>Created by <%= article.user ? article.user.username : "Anonymous" %> <%= time_ago_in_words(article.created_at) %> ago | Last update <%= time_ago_in_words(article.updated_at) %></small>
+        <div class="article-btn">
+          <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-primary" %>
+          <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger"%>
+        </div>
+      </div>
     </div>
     <% end %>
   </div>
