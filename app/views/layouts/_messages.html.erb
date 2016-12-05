@@ -1,3 +1,12 @@
-<% if flash[:notice] %>
-  <%= flash[:notice] %>
+<% if flash %>
+<div class="rows">
+  <div class="col-xs-10 col-xs-offset-1">
+    <% flash.each do |status, msg| %>
+      <div class="alert alert-dismissible alert-<%= status %>" role="alert">
+        <a href="#" class="close" aria-label="close" data-dismiss="alert">&times;</a>
+        <%= content_tag :div, msg, id: "flash_#{status}" if msg.is_a? String %>
+      </div>
+    <% end %>
+  </div>
+</div>
 <% end %>

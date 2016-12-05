@@ -1,2 +1,68 @@
+$navbar-default-bg: #ff5a5f;
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.sign-up {
+  box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  margin-top: 10px;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo {
+  text-decoration: none;
+  color: white;
+}
+
+#bs-example-navbar-collapse-1 ul a {
+  color: white;
+}
+
+.footer {
+  border-top: 1px solid #e3e3e3;
+  margin-top: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  margin-top: 45px;
+  background-image: image_url('colorful-world.jpg');
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.jumbotron div h1 {
+  color: white;
+  letter-spacing: -1px;
+  font-weight: bold;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.article-actions {
+  border-top: 1px solid #e3e3e3;
+  padding-top: 10px;
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
