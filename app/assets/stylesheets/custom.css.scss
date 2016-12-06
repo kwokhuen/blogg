@@ -1,8 +1,14 @@
 $navbar-default-bg: #ff5a5f;
 
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.well {
+  background: white;
+  border-radius: 3px;
+  box-shadow: 2px 4px 3px rgba(0,0,0,0.2);
+
+}
 
 .sign-up {
   box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
@@ -64,7 +70,6 @@ $navbar-default-bg: #ff5a5f;
 .article-title {
   font-weight: bold;
   font-size: 1.5em;
-  text-transform: uppercase;
 }
 
 .article-meta-data {
@@ -75,4 +80,14 @@ $navbar-default-bg: #ff5a5f;
 
 .article-btn {
   padding-top: 5px;
+}
+
+.user-info {
+  list-style-type: none;
+  padding: 0;
+}
+.user-info li a{
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
 }

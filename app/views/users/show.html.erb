@@ -5,3 +5,10 @@
   </div>
 </div>
 <h4 align="center"><%= @user.username.capitalize %>'s articles</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <%= render 'articles/article', object: @user.articles %>
+    </div>
+  </div>
+</div>

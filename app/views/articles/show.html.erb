@@ -1,16 +1,26 @@
 <h1 align="center"><%= @article.title %></h1>
 
 <div class="well col-xs-8 col-xs-offset-2">
-  <h4 class="center">
+  <% if @article.user %>
+  <p align="center"><small>Created by:</small></p>
+  <div align="center">
+    <ul class="user-info">
+      <li><%= link_to gravatar_for(@article.user, size: 100), user_path(@article.user) %></li>
+      <li><%= link_to @article.user.username, user_path(@article.user) %></li>
+      <li><small><%= pluralize(@article.user.articles.count, "article") %></small></li>
+    </ul>
+  </div>
+  <% end %>
+  <h5 class="center">
     <strong>Description </strong>
-  </h4>
+  </h5>
   <hr>
   <%= simple_format(@article.description) %>
-  <%= link_to "Back to article listing", articles_path, class: "btn btn-xs btn-info" %>
+  <div class="article-actions">
   <% if logged_in? && current_user == @article.user %>
-    <div class="article-actions">
       <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
       <%= link_to "Delete", article_path(@article), method: :delete, class: "btn btn-xs btn-danger", data: { confirm: "Are you sure?" } %>
-    </div>
   <% end %>
+  <%= link_to "Back to article listing", articles_path, class: "btn btn-xs btn-info" %>
+</div>
 </div>
